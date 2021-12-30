@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	dfs "github.com/imrushi/algorithms/Graph/DFS"
+	bfs "github.com/imrushi/algorithms/Graph/BFS"
 	"github.com/imrushi/algorithms/Graph/graph"
 )
 
@@ -33,6 +33,7 @@ func main() {
 	cb := func(i int) {
 		visitedOrder = append(visitedOrder, i)
 	}
-	dfs.DFS(g, g.Vertices[1], cb)
+	// dfs.DFS(g, g.Vertices[1], cb)
+	bfs.BFS(g, g.Vertices[1], cb)
 	fmt.Println(visitedOrder)
 }
